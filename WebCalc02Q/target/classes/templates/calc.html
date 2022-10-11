@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--ThymeleafをHTMLファイルで使用する為-->
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<!--ThymeleafをHTMLファイルで使用する為-->
+<title>web足し算</title>
+</head>
+<body>足し算です！
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>数値を入力してください！</p>
+	<form method="POST" action="resAdd">
+		<input type="text" inputmode=decimal name="numA" value=0>
+		<!--数字を打つところ-->
+		<b>＋</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="numB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+</body>
+
+<body>引き算！
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>数値を入力してください！</p>
+	<form method="POST" action="resSub">
+		<input type="text" inputmode=decimal name="numA" value=0>
+		<!--数字を打つところ-->
+		<b>-</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="numB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+</body>
+
+<body>掛け算
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>数値を入力してください！</p>
+	<form method="POST" action="resMul">
+		<input type="text" inputmode=decimal name="numA" value=0>
+		<!--数字を打つところ-->
+		<b>×</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="numB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+
+<body>割り算
+	<p>
+		<strong><span th:text="${message}"></span></strong>
+	</p>
+	<p>数値を入力してください！</p>
+	<form method="POST" action="resDiv">
+		<input type="text" inputmode=decimal name="numA" value=0>
+		<!--数字を打つところ-->
+		<b>÷</b>
+		<!--太文字にしたいからbタグ-->
+		<input type="text" inputmode=decimal name="numB" value=0>
+		<!--数字を打つところ-->
+
+		<input type=submit value="送信">
+		<!--送信ボタン-->
+	</form>
+
+</body>
+</body>
+</html>
+
