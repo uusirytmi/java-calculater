@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "WEBCALC_RESULT")
+@Table(name = "WEBCALCRESULT")
 
 public class ResultEntity {
 
@@ -16,4 +16,3 @@ public class ResultEntity {
 	private String Result;
 
 }
-//javax入れる必要がある？lombokは冗長なコードをアノテーションでまとめるやつ

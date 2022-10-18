@@ -65,6 +65,7 @@ public class CalcController {
 			return "error";
 		}
 		model.addAttribute("kotae", SubResult);
+		insertTable(SubResult);
 
 		return "res";
 
@@ -83,6 +84,7 @@ public class CalcController {
 			return "error";
 		}
 		model.addAttribute("kotae", MulResult);
+		insertTable(MulResult);
 
 		return "res";
 
@@ -102,6 +104,7 @@ public class CalcController {
 			return "error";
 		}
 		model.addAttribute("kotae", DivResult);
+		insertTable(DivResult);
 
 		return "res";
 
