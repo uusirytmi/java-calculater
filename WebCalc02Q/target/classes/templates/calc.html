@@ -4,9 +4,21 @@
 <head>
 <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
 <!--ThymeleafをHTMLファイルで使用する為-->
-<title>web足し算</title>
+<title>web計算機</title>
+<style type="text/css">
+button {
+	background-color: #ffc0cb;
+	padding: 10px;
+	text-align: center;
+	display: block;
+	border-color: cc0033;
+	border: 1px solid;
+}
+</style>
+
 </head>
-<body>足し算です！
+<body>
+	足し算です！
 	<p>
 		<strong><span th:text="${message}"></span></strong>
 	</p>
@@ -25,7 +37,8 @@
 
 </body>
 
-<body>引き算！
+<body>
+	引き算！
 	<p>
 		<strong><span th:text="${message}"></span></strong>
 	</p>
@@ -44,7 +57,8 @@
 
 </body>
 
-<body>掛け算
+<body>
+	掛け算
 	<p>
 		<strong><span th:text="${message}"></span></strong>
 	</p>
@@ -60,9 +74,8 @@
 		<input type=submit value="送信">
 		<!--送信ボタン-->
 	</form>
-
-
-<body>割り算
+<body>
+	割り算
 	<p>
 		<strong><span th:text="${message}"></span></strong>
 	</p>
@@ -80,6 +93,13 @@
 	</form>
 
 </body>
+
+<p></p>
+<form method="POST" action="history">
+	<!-- historyへ送信 -->
+	<!-- <button>送信</button> -->
+	<button formaction="history">計算結果ページへ移動</button>
+</form>
 </body>
 </html>
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>計算履歴ページ</title>
+</head>
+<body>
+	<p>計算履歴一覧</p>
+
+
+	<a href="calc">入力画面に戻ります！</a>
+
+	<table>
+
+		<!-- entityListが空でない場合、entityListの要素をresultに格納する -->
+		<!-- 要素の数ループする -->
+		<tr th:each="result : ${entityList}">
+			<td th:text="${result.Result}"></td>
+		</tr>
+
+	</table>
+</body>
+</html>

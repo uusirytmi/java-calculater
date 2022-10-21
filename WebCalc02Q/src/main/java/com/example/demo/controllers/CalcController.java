@@ -1,11 +1,15 @@
 package com.example.demo.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.entities.ResultEntity;
 import com.example.demo.repositories.Webcalc_Result_Repository;
 import com.example.demo.services.CalcService;
 
@@ -30,6 +34,17 @@ public class CalcController {
 
 		return "calc";
 	}//ここまで
+
+	@PostMapping("history")
+	public String history(Model model) {
+		
+		List<ResultEntity> entityList = new ArrayList<ResultEntity>();
+		entityList = webcalc_Result_Repository.selectAll();
+		
+		model.addAttribute("entityList", entityList);//大事
+		
+		return "history"; // history.hmtlへ飛ぶ。historyよばれたらhistory出してねってやつ
+	}
 
 	@PostMapping("resAdd") //ルーティングってなに
 	public String resAdd(
